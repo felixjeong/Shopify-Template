@@ -1,0 +1,111 @@
+<div class="info-area gird">
+	<div class="grid__item medium-up--one-half info-content">
+		<div class="icon_area">
+			{% if section.settings.first_image != blank %}
+				{{ section.settings.first_image | img_url: '32x32' | img_tag: 'logo-bar__image' }}
+			{% else %}
+				{{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+			{% endif %}
+		</div>
+		<div class="title">
+			{{ section.settings.first_title }}
+		</div>
+		<div class="content">
+			{{ section.settings.first_text }}
+		</div>
+		<div class="button_container">
+			<a href="{{ section.settings.first_link }}">{{ section.settings.first_button_text }}</a>
+		</div>
+	</div>
+	<div class="grid__item medium-up--one-half info-content">
+		<div class="icon_area">
+			{% if section.settings.second_image != blank %}
+				{{ section.settings.second_image | img_url: '32x32' | img_tag: 'logo-bar__image' }}
+			{% else %}
+				{{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+			{% endif %}
+		</div>
+		<div class="title">
+			{{ section.settings.second_title }}
+		</div>
+		<div class="content">
+			{{ section.settings.second_text }}
+		</div>
+		<div class="button_container">
+			<a href="{{ section.settings.second_link }}">{{ section.settings.second_button_text }}</a>
+		</div>
+	</div>
+</div>
+
+{% schema %}
+  {
+    "name": "Info Area",
+    "class": "index-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "first_title",
+        "label": "First Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "first_text",
+        "label": "First Text",
+        "default": "Text"
+      },
+      {
+        "type": "text",
+        "id": "first_button_text",
+        "label": "First Button Text",
+        "default": "Text"
+      },
+      {
+        "type": "text",
+        "id": "first_link",
+        "label": "First Link",
+        "default": "Link"
+      },
+      {
+        "type": "image_picker",
+        "id": "first_image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "second_title",
+        "label": "Second Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "second_text",
+        "label": "Second Text",
+        "default": "Text"
+      },
+      {
+        "type": "text",
+        "id": "second_button_text",
+        "label": "Second Button Text",
+        "default": "Text"
+      },
+      {
+        "type": "text",
+        "id": "second_link",
+        "label": "Second Link",
+        "default": "Link"
+      },
+      {
+        "type": "image_picker",
+        "id": "second_image",
+        "label": "Image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Info Area",
+        "category": "Advanced Layout"
+      }
+    ]
+  }
+{% endschema %}

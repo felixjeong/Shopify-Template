@@ -1,0 +1,22 @@
+<!-- snippet/product-label.liquid -->
+{% if product.title %}
+  {%- assign compare_at_price = product.compare_at_price -%}
+  {%- assign price = product.price -%}
+  {%- assign price_varies = product.price_varies -%}
+  {%- assign available = product.available -%}
+{% else %}
+  {%- assign compare_at_price = 1999 -%}
+  {%- assign price = 1999 -%}
+  {%- assign price_varies = false -%}
+  {%- assign available = true -%}
+{% endif %}
+
+{%- assign money_price = price | money -%}
+
+{% if compare_at_price > price %}
+  <div class="h4 grid-view-item__label sale_label text-center">SALE</div>
+{% else %}
+  {% if product.tags contains "new arrival" %}
+    <div class="h4 grid-view-item__label arrival_label text-center">NEW ARRIVAL</div>
+  {% endif %}
+{% endif %}

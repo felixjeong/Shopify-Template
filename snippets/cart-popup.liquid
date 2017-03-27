@@ -1,0 +1,80 @@
+<div id="ajax_cart_container" class="mfp-hide">
+  {% if cart.item_count > 0 %}
+
+    <form action="/cart" method="post" novalidate class="cart">
+      <table>
+        <tbody>
+          {% for item in cart.items %}
+            <tr class="cart__row border-bottom line{{ forloop.index }} cart-flex{% if forloop.first %} border-top{% endif %}">
+              <td class="cart__image-wrapper cart-flex-item">
+                <a href="{{ item.url | within: collections.all }}">
+                  <img class="cart__image" src="{{ item | img_url: '100x' }}" alt="{{ item.title | escape }}">
+                </a>
+              </td>
+              <td class="cart__meta small--text-left cart-flex-item">
+                <div class="list-view-item__title">
+                  <a href="{{ item.url }}">
+                    {{ item.product.title }}
+                    {% if item.quantity > 1 %}
+                      <span class="medium-up--hide"><span class="visually-hidden">{{ 'cart.label.quantity' | t }}</span>(x{{ item.quantity }})</span>
+                    {% endif %}
+                  </a>
+                </div>
+                {% unless item.variant.title contains 'Default' %}
+                  <div class="cart__meta-text">
+                    {% for option in item.product.options %}
+                      {{ option }}: {{ item.variant.options[forloop.index0] }}</br>
+                    {% endfor %}
+                  </div>
+                {% endunless %}
+                <div class="list-view-item__price">
+                  Price: {{ item.price | money }}
+                </div>
+                <div class="list-view-item__price text-right">
+                  {{ item.quantity }} X {{ item.price | money }}
+                </div>
+                <p class="small--hide">
+                  <a href="javascript:;" class="btn btn--small btn--secondary cart__remove" onclick="remove_cart_item({{ forloop.index }})">{{ 'cart.general.remove' | t }}</a>
+                </p>
+                <input type="hidden" id="line_price{{ forloop.index }}" value="{{ item.line_price }}"/>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <input type="hidden" id="cart_subtotal_price" value="{{ cart.total_price }}"/>
+      <footer class="cart__footer">
+        <div class="grid">
+          {% if section.settings.cart_notes_enable %}
+            <div class="grid__item medium-up--one-half cart-note">
+              <label for="CartSpecialInstructions" class="cart-note__label small--text-center">{{ 'cart.general.note' | t }}</label>
+              <textarea name="note" id="CartSpecialInstructions" class="cart-note__input">{{ cart.note }}</textarea>
+            </div>
+          {% endif %}
+          <div class="grid__item text-right small--text-center{% if section.settings.cart_notes_enable %} medium-up--one-half{% endif %}">
+            <div>
+              <span class="cart__subtotal-title">{{ 'cart.general.subtotal' | t }}</span>
+              <span class="cart__subtotal">{{ cart.total_price | money }}</span>
+            </div>
+            {% if cart.total_discounts > 0 %}
+              <div class="cart__savings">
+                {{ 'cart.general.savings' | t }}
+                <span class="cart__savings-amount">{{ cart.total_discounts | money }}</span>
+              </div>
+            {% endif %}
+            <input type="submit" name="checkout" class="btn btn--small-wide" value="{{ 'cart.general.checkout' | t }}">
+            {% if additional_checkout_buttons %}
+              <div class="additional-checkout-buttons">{{ content_for_additional_checkout_buttons }}</div>
+            {% endif %}
+          </div>
+        </div>
+      </footer>
+    </form>
+  {% else %}
+    <div class="empty-page-content text-center">
+      <h1>{{ 'cart.general.title' | t }}</h1>
+      <p>{{ 'cart.general.empty' | t }}</p>
+      <a href="/" class="btn btn--has-icon-after">{{ 'general.404.link' | t }}{% include 'icon-arrow-right' %}</a>
+    </div>
+  {% endif %}
+</div>

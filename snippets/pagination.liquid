@@ -1,0 +1,47 @@
+{%- assign last_page_num = paginate.current_page | plus : 9 -%}
+{% if paginate.pages < 10 %}
+  {%- assign last_page_num = paginate.pages -%}
+  {%- assign start_page_num = 1 -%}
+{% else %}
+  {%- assign start_page_num = paginate.current_page -%}
+  {% if paginate.pages < last_page_num %}
+    {%-  assign last_page_num = paginate.pages -%}
+  {% endif %}
+{% endif %}
+<ul class="list--inline pagination text-right">
+  <li>
+    {% unless paginate.previous.is_link %}
+      <div class="btn btn--secondary btn--narrow btn--disabled">
+        {% include 'icon-arrow-left' %}
+        <span class="icon__fallback-text">{{ 'general.pagination.previous' | t }}</span>
+      </div>
+    {% else %}
+      <a href="{{ paginate.previous.url }}" class="btn btn--secondary btn--narrow">
+        {% include 'icon-arrow-left' %}
+        <span class="icon__fallback-text">{{ 'general.pagination.previous' | t }}</span>
+      </a>
+    {% endunless %}
+  </li>
+  {% for part in paginate.parts %}
+    {% if forloop.index >= start_page_num and forloop.index <= last_page_num %}
+      {% if forloop.index == last_page_num %}
+        <li {% if paginate.current_page == forloop.index %} class="active" {% endif %}>{{ part.title | link_to: part.url}}</li>
+      {% else %}
+        <li class="pagination_link{% if paginate.current_page == forloop.index %} active{% endif %}">{{ part.title | link_to: part.url}}</li>
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+  <li>
+    {% unless paginate.next.is_link %}
+      <div class="btn btn--secondary btn--narrow btn--disabled">
+        {% include 'icon-arrow-right' %}
+        <span class="icon__fallback-text">{{ 'general.pagination.next' | t }}</span>
+      </div>
+    {% else %}
+      <a href="{{ paginate.next.url }}" class="btn btn--secondary btn--narrow">
+        {% include 'icon-arrow-right' %}
+        <span class="icon__fallback-text">{{ 'general.pagination.next' | t }}</span>
+      </a>
+    {% endunless %}
+  </li>
+</ul>

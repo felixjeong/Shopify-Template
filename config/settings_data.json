@@ -1,0 +1,427 @@
+{
+  "current": {
+    "color_text": "#3d4246",
+    "color_body_text": "#788188",
+    "color_sale_text": "#7796A8",
+    "color_borders": "#e8e9eb",
+    "color_button": "#7796A8",
+    "color_button_text": "#fff",
+    "color_small_button": "#fff",
+    "color_small_button_text": "#3d4246",
+    "color_text_field": "#fff",
+    "color_text_field_text": "#000",
+    "color_image_overlay_text": "#fff",
+    "color_image_overlay": "#3d4246",
+    "image_overlay_opacity": "0.25",
+    "color_body_bg": "#ffffff",
+    "type_header_family": "Google_Montserrat_400_sans",
+    "type_header_base_size": "26px",
+    "type_base_family": "Google_Roboto_400_sans",
+    "type_base_size": "16px",
+    "type_bold_product_titles": false,
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "social_twitter_link": "",
+    "social_facebook_link": "",
+    "social_pinterest_link": "",
+    "social_instagram_link": "",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "favicon": "",
+    "checkout_header_image": "",
+    "checkout_logo_image": "",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "Helvetica Neue",
+    "checkout_body_font": "Helvetica Neue",
+    "checkout_accent_color": "#1990C6",
+    "checkout_button_color": "#1990C6",
+    "checkout_error_color": "#ff6d6d",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "align_logo": "left",
+          "logo": "",
+          "logo_max_width": "100",
+          "main_linklist": "main-menu",
+          "message": false,
+          "message_text": "Announce something here",
+          "message_link": "",
+          "color_bg": "#7796A8",
+          "color_text": "#fff"
+        }
+      },
+      "hero": {
+        "type": "hero",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/latest_trends.jpg",
+          "alignment": "center",
+          "title": "THE LATEST TRENDS",
+          "text": "<p>from thigh highs to patch work<\/p>",
+          "hero_size": "large",
+          "text_size": "medium",
+          "button_label": "Shop Trends",
+          "button_link": "shopify:\/\/collections\/best-selling-products"
+        }
+      },
+      "slideshow": {
+        "type": "slideshow",
+        "blocks": {
+          "slideshow-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/1.jpg",
+              "alignment": "center",
+              "title": "",
+              "subheading": "",
+              "link": ""
+            }
+          },
+          "slideshow-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/2.jpg",
+              "alignment": "center",
+              "title": "",
+              "subheading": "",
+              "link": ""
+            }
+          },
+          "1482897342534": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/3.jpg",
+              "alignment": "center",
+              "title": "",
+              "subheading": "",
+              "link": ""
+            }
+          },
+          "1482897376272": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/4.jpg",
+              "alignment": "center",
+              "title": "",
+              "subheading": "",
+              "link": ""
+            }
+          },
+          "1482931220203": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/5.jpg",
+              "alignment": "top",
+              "title": "",
+              "subheading": "",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "slideshow-0",
+          "slideshow-1",
+          "1482897342534",
+          "1482897376272",
+          "1482931220203"
+        ],
+        "settings": {
+          "autoplay": true,
+          "autoplay_speed": "5000",
+          "slideshow_height": "medium",
+          "text_size": "medium"
+        }
+      },
+      "featured-collections": {
+        "type": "collection",
+        "blocks": {
+          "1484970014489": {
+            "type": "collection_list",
+            "settings": {
+              "collection": "women-2"
+            }
+          },
+          "1484970030970": {
+            "type": "collection_list",
+            "settings": {
+              "collection": "men-1"
+            }
+          },
+          "1484970087402": {
+            "type": "collection_list",
+            "settings": {
+              "collection": "kids"
+            }
+          }
+        },
+        "block_order": [
+          "1484970014489",
+          "1484970030970",
+          "1484970087402"
+        ],
+        "settings": {
+          "title": "Featured collection",
+          "grid": "4",
+          "rows": "2",
+          "show_vendor": true,
+          "show_view_all": true
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "footer_linklist": "service-menu",
+          "footer_linklist_two": "",
+          "footer_newsletter_enable": true,
+          "show_payment_icons": false
+        }
+      },
+      "1482933014248": {
+        "type": "logo-bar",
+        "blocks": {
+          "1482933014248-0": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/BIRKENSTOCK.jpg",
+              "link": ""
+            }
+          },
+          "1482933014248-1": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/originals.png",
+              "link": ""
+            }
+          },
+          "1482933014248-2": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Converse.png",
+              "link": ""
+            }
+          },
+          "1482933014248-3": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/JEFFREYCAMPBELL.png",
+              "link": ""
+            }
+          },
+          "1482934125918": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Stevemadden.png",
+              "link": ""
+            }
+          },
+          "1482934136303": {
+            "type": "logo_image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/timberland.jpg",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "1482933014248-0",
+          "1482933014248-1",
+          "1482933014248-2",
+          "1482933014248-3",
+          "1482934125918",
+          "1482934136303"
+        ],
+        "settings": {
+          "title": ""
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "blocks": {
+          "1485250084241": {
+            "type": "color_list",
+            "settings": {
+              "color_title": "Black",
+              "color_handle": "black",
+              "color_image": "shopify:\/\/shop_images\/black.png"
+            }
+          },
+          "1485250532083": {
+            "type": "color_list",
+            "settings": {
+              "color_title": "White",
+              "color_handle": "white",
+              "color_image": "shopify:\/\/shop_images\/white.png"
+            }
+          },
+          "1485250562131": {
+            "type": "color_list",
+            "settings": {
+              "color_title": "Red",
+              "color_handle": "red",
+              "color_image": "shopify:\/\/shop_images\/red.png"
+            }
+          },
+          "1485250579129": {
+            "type": "color_list",
+            "settings": {
+              "color_title": "Blue",
+              "color_handle": "blue",
+              "color_image": "shopify:\/\/shop_images\/blue.png"
+            }
+          },
+          "1485250604656": {
+            "type": "color_list",
+            "settings": {
+              "color_title": "Green",
+              "color_handle": "green",
+              "color_image": "shopify:\/\/shop_images\/green.png"
+            }
+          },
+          "1485250760376": {
+            "type": "color_list",
+            "settings": {
+              "color_title": "Yellow",
+              "color_handle": "yellow",
+              "color_image": "shopify:\/\/shop_images\/yellow.png"
+            }
+          }
+        },
+        "block_order": [
+          "1485250084241",
+          "1485250532083",
+          "1485250562131",
+          "1485250579129",
+          "1485250604656",
+          "1485250760376"
+        ],
+        "settings": {
+          "layout": "grid",
+          "grid": "3",
+          "rows": "8",
+          "show_collection_image": true,
+          "show_vendor": false,
+          "sort_enable": true,
+          "tags_enable": true
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "image_size": "large",
+          "show_quantity_selector": false,
+          "show_variant_labels": true,
+          "show_vendor": true,
+          "enable_zoom": true,
+          "show_share_buttons": true
+        }
+      },
+      "1484950867844": {
+        "type": "info-area",
+        "settings": {
+          "first_title": "Customer Service At its finest",
+          "first_text": "Have a question? Our courteous and accomodating staff will provide expert assistance.",
+          "first_button_text": "Contact Us",
+          "first_link": "\/pages\/contact-us",
+          "first_image": "shopify:\/\/shop_images\/mobile_icon_5d198b59-049c-4f91-8176-1d757786dae8.png",
+          "second_title": "Shipping & Returns Made easy",
+          "second_text": "A user-friendly and return policy make kixters.com an easy way to get the latest footwear and accessories",
+          "second_button_text": "Shipping Info",
+          "second_link": "\/pages\/shipping-and-returns",
+          "second_image": "shopify:\/\/shop_images\/shipping_icon_33535d09-713a-45ae-9b88-529ec8027224.png"
+        }
+      }
+    },
+    "content_for_index": [
+      "slideshow",
+      "featured-collections",
+      "hero",
+      "1484950867844",
+      "1482933014248"
+    ]
+  },
+  "presets": {
+    "Default": {
+      "color_text": "#3d4246",
+      "color_body_text": "#788188",
+      "color_sale_text": "#7796A8",
+      "color_borders": "#e8e9eb",
+      "color_button": "#7796A8",
+      "color_button_text": "#fff",
+      "color_small_button": "#fff",
+      "color_small_button_text": "#3d4246",
+      "color_text_field": "#fff",
+      "color_text_field_text": "#000",
+      "color_image_overlay_text": "#fff",
+      "color_image_overlay": "#3d4246",
+      "image_overlay_opacity": "0.25",
+      "color_body_bg": "#fff",
+      "type_header_family": "Google_Work+Sans_600_sans",
+      "type_header_base_size": "26px",
+      "type_base_family": "Google_Work+Sans_400_sans",
+      "type_base_size": "16px",
+      "type_bold_product_titles": false,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {}
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {}
+            },
+            "slideshow-1": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "slideshow-1"
+          ],
+          "settings": {}
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {}
+        },
+        "feature-row": {
+          "type": "feature-row",
+          "settings": {}
+        },
+        "footer": {
+          "type": "footer",
+          "settings": {
+            "footer_linklist_two": ""
+          }
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "feature-row",
+        "slideshow"
+      ]
+    }
+  }
+}
